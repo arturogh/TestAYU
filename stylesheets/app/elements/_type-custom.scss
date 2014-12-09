@@ -5,7 +5,9 @@ html {
 
 // DISABLE ANCHOR UNDERLINE ON HOVER
 // a {
-//   &:hover {
+//   &:hover,
+//   &:focus,
+//   &:active {
 //     text-decoration: none !important;
 //   }
 // }
