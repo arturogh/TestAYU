@@ -1,0 +1,52 @@
+# TestAYU
+=======
+
+Esta página será diseñada y desarrollada tomando en cuenta:
+
+### Contar con estas secciones:
+
+- Blog (home)
+- singles (posts del blog)
+
+---
+
+### Como funcionalidades:
+
+#### General:
+
+- Un formulario de inscripción (solo con 2 campos nombre e email)
+- Header: En el header deben especificarse los link a las redes sociales (Facebook y Twitter)
+
+#### Home:
+- Esta sección de contar con los últimos 10 posts producidos en el sitio.
+- Los artículos deben mostrar:
+  - el título
+  - introducción
+  - 1 foto
+  - nombre del autor
+  - fecha de publicación
+  - link al contenido del artículo.
+- Una columna en donde se puedan filtrar los posts por categorías (max 4).
+
+#### Artículo:
+- Esta página debe tener un menú de retorno al homepage
+- El título
+- 1 foto
+- contenido
+- nombre del autor
+- fecha de publicación.
+- Botones para compartir en redes sociales
+- Sección de comentarios.
+
+---
+
+### Desarrollar con:
+
+- Bootstrap (HTML y CSS)
+- Sass
+- jQuery
+- Expression Engine
+- Servicios complementarios
+  - Addthis
+  - Disqus
+  - Github
