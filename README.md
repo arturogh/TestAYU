@@ -34,6 +34,7 @@ Esta página será diseñada y desarrollada tomando en cuenta:
 #### Artículo:
 - Esta página debe tener un menú de retorno al homepage
 - El título
+- Categoría del artículo
 - 1 foto
 - contenido
 - nombre del autor
