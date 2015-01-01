@@ -1,16 +1,19 @@
 # TestAYU
-=======
 
 Esta página será diseñada y desarrollada tomando en cuenta:
 
-### Contar con estas secciones:
+1. Secciones
+2. Funcionalidades
+3. Desarrollar con...
+
+### 1. Secciones:
 
 - Blog (home)
 - singles (posts del blog)
 
----
 
-### Como funcionalidades:
+
+### 2. funcionalidades:
 
 #### General:
 
@@ -38,9 +41,9 @@ Esta página será diseñada y desarrollada tomando en cuenta:
 - Botones para compartir en redes sociales
 - Sección de comentarios.
 
----
 
-### Desarrollar con:
+
+### 3. Desarrollar con:
 
 - Bootstrap (HTML y CSS)
 - Sass
