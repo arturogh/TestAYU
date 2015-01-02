@@ -1,0 +1,90 @@
+@import "bootstrap";
+
+//Variables
+
+        //Header
+        $hNavDesktop: 100px;
+        $logoH: 40px;
+        $hNavMovil: 50px;
+
+        //Footer
+        $fHColor:#FEFEFE;
+        $fTColor:#F8F8F8;
+
+//Estructura y estilo
+
+//Header
+
+        .logo {
+            @media screen and (min-width:992px) {
+            height: $hNavDesktop;
+            img {
+                margin: 0 auto;
+                height: $logoH;
+                position: relative;
+                top:($hNavDesktop - $logoH)/2;
+                }
+            }
+             @media screen and (max-width:991px) {
+            height: $hNavMovil;
+            img {
+                margin: 0 auto;
+                height: $logoH;
+                position: relative;
+                top:($hNavMovil - $logoH)/2;
+                }
+            }
+            @media screen and (max-width:300px) {
+            img {
+                width: 100%;
+                height: auto;
+                position: relative;
+                }
+            }
+        }
+
+        //Móvil
+        .bNavMovil {
+            padding:10px;
+            text-align: center;
+            @media screen and (min-width:992px) {
+                display: none;
+            }
+        }
+        //Desktop
+            .dNav {
+                @media screen and (max-width:991px) {
+                    display: none;
+                }
+                height:$hNavDesktop;
+                li a {
+                    text-align: center;
+                    line-height: $hNavDesktop;
+                    top:-10px;
+                    img {
+                        height: $hNavDesktop/2;
+                        width: auto;
+                    }
+                }
+            
+        }
+
+
+
+//Footer
+
+    .footer {
+        background: #47484B;
+        h2 {
+            color: $fHColor;
+        }
+        button.back {
+            text-align: center;
+            color:$fTColor;
+            margin: 0 10px;
+            &:hover {
+                color: $fTColor;
+                text-decoration: none;
+            }
+        }
+    }
