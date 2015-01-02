@@ -6,6 +6,7 @@
         $heightNavDesktop: 100px;
         $logoH: 40px;
         $heightNavMovil: 50px;
+        $desktopNavFSize: 1.5em;
 
         //Footer
         $fHColor:#FEFEFE;
@@ -19,16 +20,14 @@
 //Header
 
         .logo {
-            @media screen and (min-width:992px) {
+            @media screen and (min-width:768px) {
             height: $heightNavDesktop;
             img {
-                margin: 0 auto;
-                height: $logoH;
                 position: relative;
                 top:($heightNavDesktop - $logoH)/2;
                 }
             }
-             @media screen and (max-width:991px) {
+             @media screen and (max-width:767px) {
             height: $heightNavMovil;
             img {
                 margin: 0 auto;
@@ -59,25 +58,29 @@
                     text-decoration: none;
                 }
             }
-            @media screen and (min-width:992px) {
+            @media screen and (min-width:768px) {
                 display: none;
             }
         }
         //Desktop
             .dNav {
-                @media screen and (max-width:991px) {
+                position: absolute;
+                right: 0;
+                @media screen and (max-width:767px) {
                     display: none;
                 }
                 height:$heightNavDesktop;
-                li a {
-                    text-align: center;
-                    line-height: $heightNavDesktop;
-                    top:-10px;
-                    img {
-                        height: $heightNavDesktop/2;
-                        width: auto;
+                li
+                        a {
+                        text-align: center;
+                        line-height: $heightNavDesktop;
+                            font-size: $desktopNavFSize;
+                        top:-10px;
+                        img {
+                            height: $heightNavDesktop/2;
+                            width: auto;
+                        }
                     }
-                }
             
         }
 
@@ -108,15 +111,26 @@
             }
         }
         p {
-            padding: 10px;
+            width: 80%;
+            padding-top: 20px;
+            margin: 0 auto;
             text-align: left;
             color: $fTColor;
             font-size: $footerParFSize;
             font-weight: $footerParFWeight;
+            @media screen and (max-width:991px) {
+                display: none;
+            }
         }
-        ul.footerSocial {
+        .socialFooter {
             list-style: none;
             margin: 0;
             padding: 0;
+            text-align: center;
+            @media screen and (min-width:992px){
+                img {
+                    padding: 10px;
+                }
+            }
         }
     }
