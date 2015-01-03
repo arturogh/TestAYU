@@ -5368,9 +5368,37 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  padding-bottom: 70px; }
+
+.navbar-brand {
+  padding: 0; }
+
+.navbar-header {
+  height: 100%; }
+
+img.brand {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: none; }
+img.social {
+  display: block; }
+@media screen and (max-width: 767px) {
+  img.brand-xs {
+    display: block; } }
+@media screen and (min-width: 768px) {
+  img.brand-sm {
+    display: block; } }
+
+@media screen and (max-width: 767px) {
+  .dNavBar {
+    display: none; } }
+
 @media screen and (min-width: 768px) {
   .logo {
-    height: 100px; }
+    height: 100%;
+    width: auto; }
     .logo img {
       position: relative;
       top: 30px; } }
@@ -5448,12 +5476,17 @@ button.close {
       .footer p {
         display: none; } }
   .footer .socialFooter {
-    list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     text-align: center; }
-    @media screen and (min-width: 992px) {
-      .footer .socialFooter img {
-        padding: 10px; } }
+    @media screen and (max-width: 991px) {
+      .footer .socialFooter {
+        padding: 40px 0; } }
+    .footer .socialFooter img {
+      width: 80px;
+      height: auto; }
+      @media screen and (min-width: 992px) {
+        .footer .socialFooter img {
+          margin: 10px; } }
 
 /*# sourceMappingURL=style.css.map */

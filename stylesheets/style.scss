@@ -19,9 +19,49 @@
 
 //Header
 
+//Para compensar el navbar (ver documebtación bootstrap)
+body { padding-bottom: 70px; }
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-header {
+    height: 100%;
+}
+
+img {
+    &.brand {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+    }
+    &.social {
+    display: block;
+    }
+
+@media screen and (max-width:767px) {
+    &.brand-xs {
+        display: block;
+    }
+}
+@media screen and (min-width:768px) {
+    &.brand-sm {
+        display: block;
+    }
+}    
+}
+
+.dNavBar {
+    @media screen and (max-width:767px) {
+        display: none
+    }
+}
         .logo {
             @media screen and (min-width:768px) {
-            height: $heightNavDesktop;
+            height: 100%;
+            width: auto;
             img {
                 position: relative;
                 top:($heightNavDesktop - $logoH)/2;
@@ -123,13 +163,17 @@
             }
         }
         .socialFooter {
-            list-style: none;
             margin: 0;
-            padding: 0;
+            padding: 10px;
             text-align: center;
+            @media screen and (max-width:991px) {
+                padding: 40px 0;
+            }
+            img {
+            width: 80px;
+            height: auto;
             @media screen and (min-width:992px){
-                img {
-                    padding: 10px;
+                    margin: 10px;
                 }
             }
         }
