@@ -5391,6 +5391,13 @@ img.social {
   img.brand-sm {
     display: block; } }
 
+.mNavBar {
+  position: absolute;
+  right: 20px; }
+  @media screen and (min-width: 767px) {
+    .mNavBar {
+      display: none; } }
+
 @media screen and (max-width: 767px) {
   .dNavBar {
     display: none; } }
