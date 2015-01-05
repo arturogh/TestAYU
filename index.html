@@ -18,88 +18,88 @@
     
   </head>
     <body>
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="images/logo2.png" class="brand brand-xs">
-                    </a>
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="images/logo2.png" class="brand brand-sm">
-                    </a>
-                    <p class="navbar-text mNavBar">Menú <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></p>
+        <div class="container-fluid">
+            <!--row 1: iconos de redes sociales de tablet (sm)-->
+            <div class="row row1">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <ul class="tabletSocialIcons list-inline text-center">
+                        <li><img src="images/facebook2.png" alt=""></li>
+                        <li><img src="images/twitter2.png" alt=""></li>
+                        <li><img src="images/instagram2.png" alt=""></li>
+                    </ul>
                 </div>
-                <div class="dNavBar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Conoce más</a></li>
-                    <li><a href="#">Síguenos</a></li>
-                </ul>
-         <a class="navbar-brand navbar-right" href="#">
-                        <img alt="Brand" src="images/logo2Small.png" class="brand social">
-                    </a>
-                    <a class="navbar-brand navbar-right" href="#">
-                        <img alt="Brand" src="images/logo1Small.png" class="brand social">
-                    </a>
-                    <a class="navbar-brand navbar-right" href="#">
-                        <img alt="Brand" src="images/logo1Small.png" class="brand social">
-                    </a>
-                    </div>
-          </div>
-        </nav>
-   <!-- <div class="container header">
-        <div class="row">
-            <div class="col-xs-6 col-xs-offset-3 bNavMovil">
-                <button type="button" class="btn btn-primary">Menú <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-                </button>
             </div>
-        </div>
-        <div class="row navRow">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-3 logo">
-                <img src="images/logo2.png" class="img-responsive" alt="">
-            </div>
-            <div class="col-sm-9">
-                <ul class="nav nav-pills dNav">
-                     <li role="presentation"><a href="#">Conoce más</a></li>
-                     <li role="presentation"><a href="#">Síguenos</a></li>
-                     <li role="presentation"><a href="#"><img src="images/facebook2.png" alt="" class="img-rounded"></a></li>
-                     <li role="presentation"><a href="#"><img src="images/twitter2.png" alt="" class="img-rounded"></a></li>
-                     <li role="presentation"><a href="#"><img src="images/instagram2.png" alt="" class="img-rounded"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
-    <div class="container main">
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <h2>Filter this shit</h2>
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#">Trabajos</a></li>
-                    <li role="presentation"><a href="#">Noticias</a></li>
-                    <li role="presentation"><a href="#">Novedades</a></li>
-                    <li role="presentation"><a href="#">Premios</a></li>
-                </ul>
-            </div>
-           <div class="col-xs-12 col-md-9">
-                <div class="page-header">
-                    <div class="row">
-                        <h1>Example page header</h1>
-                        <small class=" datos categoria">en Emprendimiento</small>
-                        <small class="datos autor"> por Pedro Sifuentes</small>
-                        <small class="datos fecha"> el 01/01/2014</small>
-                    </div>
+            <!-- row 2: logo, y para desktop incluye nav e íconos sociales-->
+            <div class="row row2">
+                <div class="col-xs-12 col-md-3 text-center">
+                    <img src="images/logo2.png" alt="">
                 </div>
-                <img src="images/chicas.jpg" class="img-responsive" alt="">
-                <p>Este es un resumen del post. Aquí se cuenta brevemente de qué trata esta historia tan linda. Escribimos un párrafo que te úbica ne la historia y ya luego si quieres puedes leer más al respecto.</p>
+                <div class="col-md-8 col-md-offset-1 desktopNav">
+                    <ul class="list-inline text-right">
+                        <li><a href="">Conoce más</a></li>
+                        <li><a href="">Suscríbete</a></li>
+                        <li><a href=""><img src="images/facebook2.png" alt=""></a></li>
+                        <li><a href=""><img src="images/twitter2.png" alt=""></a></li>
+                        <li><a href=""><img src="images/instagram2.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- row 3: navegación para tablet (sm) y móvil(xs), filtro, contenido del blog -->
+            <div class="row row3">
+                <!-- sub-row 1: filtro. Para móvil y tablet: navegación -->
+                <div class="col-xs-12 col-md-3">
+                    <div class="row subRow">
+                        <!-- Filtro -->
+                        <div class="col-xs-12">
+                            <h2 class="desktopfilter">Navega por temas</h2>
+                            <ul class="nav nav-pills nav-stacked desktopfilter">
+                                <li role="presentation" class="active"><a href="#">Trabajos</a></li>
+                                <li role="presentation"><a href="#">Noticias</a></li>
+                                <li role="presentation"><a href="#">Novedades</a></li>
+                                <li role="presentation"><a href="#">Premios</a></li>
+                            </ul>
+                        <!-- Navegación para tablet y móvil -->
+                            <ul class="subRowNav list-inline text-center">
+                                
+                                <li>
+                                <div class="dropdown mobileFilter">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                Navega por temas <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+  </ul>
+</div>
+                               </li>
+                                <!-- Navegación móvil -->
+                                <li class="mobileNav"><a href="" class="btn btn-default">Menú <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></li>
+                                <!-- Navegación tablet -->
+                                <li class="tabletNav"><a href="" class="btn btn-default">Conoce más</a></li>
+                                <li class="tabletNav"><a href="" class="btn btn-default">Suscríbete</a></li>
+                            </ul>
+                </div>
+                    </div>
+                    </div>
+                <div class="col-xs-12 col-md-9">
+                    <h1>Example page header</h1>
+                    <small class=" datos categoria">en Emprendimiento</small>
+                    <small class="datos autor"> por Pedro Sifuentes</small>
+                    <small class="datos fecha"> el 01/01/2014</small>
+                    <img src="images/chicas.jpg" class="img-responsive" alt="">
+                    <p>Este es un resumen del post. Aquí se cuenta brevemente de qué trata esta historia tan linda. Escribimos un párrafo que te úbica ne la historia y ya luego si quieres puedes leer más al respecto.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid footer">
-     <div class="row">
-         <div class="col-xs-12 col-md-2">
-             <button type="button" class="btn btn-link back">Regresar al inicio <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
-         </div>
-     </div>
-      <div class="row">
+        <div class="container-fluid footer">
+            <div class="row">
+                <div class="col-xs-12 col-md-2">
+                    <button type="button" class="btn btn-link back">Regresar al inicio <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            <div class="row">
             <div class="col-xs-12 col-md-5">
                 <button type="button" class="btn btn-primary btn-lg footerBoton">Conoce más</button>
                 <p>&lt;laboratoria&gt; impulsa a mujeres a salir adelante enseñándoles programación y desarrollo para un mundo global y competitivo.</p>
@@ -109,7 +109,7 @@
                 <p>Cada mes enviamos las historias que más nos inspiraron suscríbete a este correo. Sé feliz.</p>
            </div>
            <div class="col-xs-12 col-md-2">
-           <div class="row socialFooter">
+                <div class="row socialFooter">
                     <div class="col-xs-2 col-xs-offset-2 col-md-12 col-md-offset-0">
                         <a href="#"><img src="images/facebook2.png" alt="" class="img-responsive center-block img-rounded"></a>
                     </div>

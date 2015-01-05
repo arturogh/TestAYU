@@ -3,10 +3,8 @@
 //Variables
 
         //Header
-        $heightNavDesktop: 100px;
-        $logoH: 40px;
-        $heightNavMovil: 50px;
-        $desktopNavFSize: 1.5em;
+        $heightRow1: 50px;
+        $heightRow2: 50px;
 
         //Footer
         $fHColor:#FEFEFE;
@@ -16,124 +14,74 @@
         $footerParFWeight:300;
 
 //Estructura y estilo
+    //Header
+        //Para compensar el navbar (ver documebtación bootstrap)
+            body { padding-bottom: 70px; }
 
-//Header
-
-//Para compensar el navbar (ver documebtación bootstrap)
-body { padding-bottom: 70px; }
-
-.navbar-brand {
-    padding: 0;
-}
-
-.navbar-header {
-    height: 100%;
-}
-
-img {
-    &.brand {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: none;
-    }
-    &.social {
-    display: block;
-    }
-
-@media screen and (max-width:767px) {
-    &.brand-xs {
-        display: block;
-    }
-}
-@media screen and (min-width:768px) {
-    &.brand-sm {
-        display: block;
-    }
-}    
-}
-
-.mNavBar {
-    position: absolute;
-    right: 20px;
-    @media screen and (min-width:767px) {
-        display: none;
-    }
-}
-
-.dNavBar {
-    @media screen and (max-width:767px) {
-        display: none
-    }
-}
-        .logo {
-            @media screen and (min-width:768px) {
-            height: 100%;
-            width: auto;
-            img {
-                position: relative;
-                top:($heightNavDesktop - $logoH)/2;
-                }
+        //Arreglando botones desalineados
+        /* .btn {
+            display: inline;
+        } */
+        .row1 {
+            display: none;
+            @media screen and (min-width:768px) and (max-width:991px) {
+                display: inherit;
+                height: $heightRow1;
             }
-             @media screen and (max-width:767px) {
-            height: $heightNavMovil;
-            img {
-                margin: 0 auto;
-                height: $logoH;
-                position: relative;
-                top:($heightNavMovil - $logoH)/2;
-                }
-            }
-            @media screen and (max-width:300px) {
-            img {
-                width: 100%;
-                height: auto;
-                position: relative;
-                }
+                img {
+                    height: $heightRow2;
+                    width: auto;
             }
         }
-
-        //Móvil
-        .bNavMovil {
-            padding:10px;
-            text-align: center;
-            button {
-                 color:black;
-                margin: 0 10px;
-                padding: 5px;
-                &:hover {
-                    color: black;
-                    text-decoration: none;
+        .row2 {
+            height: $heightRow2;
+            div {
+                height: 100%;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+                ul {
+                    height: 100%;
+                    li img {
+                        height: $heightRow2;
+                        width: auto;
+                    }
                 }
             }
-            @media screen and (min-width:768px) {
-                display: none;
-            }
-        }
-        //Desktop
-            .dNav {
-                position: absolute;
-                right: 0;
-                @media screen and (max-width:767px) {
+            .desktopNav {
+                @media screen and (max-width:1001px) {
                     display: none;
                 }
-                height:$heightNavDesktop;
-                li
-                        a {
-                        text-align: center;
-                        line-height: $heightNavDesktop;
-                            font-size: $desktopNavFSize;
-                        top:-10px;
-                        img {
-                            height: $heightNavDesktop/2;
-                            width: auto;
-                        }
+            }
+            }
+        
+        .row3 {
+            .desktopfilter {
+                @media screen and (max-width:1001px) {
+                    display: none;
+                }
+            }
+            .mobileNav {
+                    @media screen and (min-width:768px) {
+                        display: none;
                     }
-            
+                }
+            .tabletNav {
+                @media screen and (min-width:1002px) {
+                    display: none; 
+                }
+                @media screen and (max-width:767px) {
+                    display: none; 
+                }
+            }
+            .mobileFilter {
+                @media screen and (min-width:1002px) {
+                    display: none;
+                }
+            }
         }
-
-
-
+        
 //Footer
 
     .footer {
