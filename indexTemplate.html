@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+    <body>
+        <div class="container-fluid">
+            <!--row 1: iconos de redes sociales de tablet (sm)-->
+            <div class="row row1">
+                <div class="col-sm-10 col-sm-offset-1">
+                    <ul class="tabletSocialIcons list-inline text-center">
+                        <li><a href=""><img src="images/facebook2.png" alt="" class="img-rounded"></a></li>
+                        <li><a href=""><img src="images/twitter2.png" alt="" class="img-rounded"></a></li>
+                        <li><a href=""><img src="images/instagram2.png" alt="" class="img-rounded"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- row 2: logo, y para desktop incluye nav e íconos sociales-->
+            <div class="row row2">
+                <div class="col-xs-12 col-md-3 text-center">
+                    <img src="images/logo2.png" alt="">
+                </div>
+                <div class="col-md-9 desktopNav">
+                    <ul class="list-inline text-right">
+                        <li><a href="">Conoce más</a></li>
+                        <li><a href="" class="suscribeModal">Suscríbete</a></li>
+                        <li><a href=""><img src="images/facebook2.png" alt="" class="img-rounded"></a></li>
+                        <li><a href=""><img src="images/twitter2.png" alt="" class="img-rounded"></a></li>
+                        <li><a href=""><img src="images/instagram2.png" alt="" class="img-rounded"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- row 3: navegación para tablet (sm) y móvil(xs), filtro, contenido del blog -->
+            <div class="row row3">
+                <!-- sub-row 1: filtro. Para móvil y tablet: navegación -->
+                <div class="col-xs-12 col-md-3">
+                    <div class="row subRow">
+                        <!-- Filtro -->
+                        <div class="col-xs-12">
+                            <h2 class="desktopfilter">Navega por temas</h2>
+                            <ul class="nav nav-pills nav-stacked desktopfilter">
+                                {exp:channel:categories channel="yourchannel" style="linear"}
+                                <li role="presentation"><a hef="{path='channel'}">{category_name}</a></li>
+                                {/exp:channel:categories}
+                            </ul>
+                        <!-- Navegación para tablet y móvil -->
+                            <ul class="subRowNav list-inline text-center">
+                                
+                                <li>
+                                <div class="dropdown mobileFilter">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                Navega por temas <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+   {exp:channel:categories channel="yourchannel" style="linear"}
+                                 <li role="presentation"><a role="menuitem" tabindex="-1" hef="{path='channel'}">{category_name}</a></li>
+                                {/exp:channel:categories}
+  </ul>
+</div>
+                               </li>
+                                <!-- Navegación móvil -->
+                                <li class="mobileNav"><a href="#footer" class="btn btn-default">Menú <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></li>
+                                <!-- Navegación tablet -->
+                                <li class="tabletNav"><a href="" class="btn btn-default">Conoce más</a></li>
+                                <li class="tabletNav"><a href="" class="btn btn-default suscribeModal">Suscríbete</a></li>
+                            </ul>
+                </div>
+                    </div>
+                    </div>
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
+                    {exp:channel:entries channel="blog" limit="10" paginate="bottom"}
+                    <h1><a href="{url_title_path='site/article'}" title="{title}">{title}</a></h1>
+                    <small>Un artículo sobre <a href="{path='channel'}" class=" subLink linkTheme">{category_name}</a>
+                     por {cf_author} el {entry_date}</small>
+                    {cf_image}{cf_excerpt class="content"}
+                    <p><a href="{url_title_path='site/article'}" class="readMore">Leer más</a></p>
+                    {paginate}
+                    <p class="paginate">Page {current_page} of {total_pages} pages {pagination_links}</p>
+                    {/paginate}
+                    {/exp:channel:entries}
+                </div>
+        <div class="container-fluid footer">
+            <div class="row">
+                <div class="col-xs-12 col-md-2">
+                    <a type="button" class="btn btn-link upButton" href="#start">Regresar al inicio <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-xs-6 col-md-5">
+                <a type="button" class="btn btn-primary btn-lg footerBoton">Conoce más</a>
+                <p>&lt;laboratoria&gt; impulsa a mujeres a salir adelante enseñándoles programación y desarrollo para un mundo global y competitivo.</p>
+                <p class="mobileFooterText">Nuestro propósito y misión</p>
+            </div>
+            <div class="col-xs-6 col-md-5">
+                <a type="button" class="btn btn-primary btn-lg footerBoton suscribeModal">Suscríbete</a>
+                <p>Cada mes enviamos las historias que más nos inspiraron suscríbete a este correo. Sé feliz.</p>
+                <p class="mobileFooterText">Mantente al tanto de lo que hacemos</p>
+           </div>
+           <div class="col-xs-12 col-md-2">
+                <ul class="footerSocialIcons list-inline">
+                    <li class="text-left"><img src="images/facebook2.png" alt="" class="img-rounded"></li>
+                    <li class="text-center"><img src="images/twitter2.png" alt="" class="img-rounded"></li>
+                    <li class="text-right"><img src="images/instagram2.png" alt="" class="img-rounded"></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    <div id="overlay">
+        <div class="form-group">
+            <h1>Suscríbete</h1>
+            <p>Envíamos un mail mensual con los últimos logros y novedades de laboratoria. Tu bandeja de correo está a salvo con nosotros.</p>
+            <form>
+                <label for="email" class="control-label">Nombre</label>
+                <input type="text" class="form-control" id="email">
+                <label for="recipient-name" class="control-label">Email</label>            
+                <input type="text" class="form-control" id="recipient-name">
+                <ul class="nav-justified text-center">
+                    <li><button type="button" class="btn btn-primary btn-lg">Suscribirse</button></li>
+                    <li><button type="button" id="close" class="btn btn-default btn-link" data-dismiss="modal">Cerrar</button></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Custom Modal -->
+    <script src="javascripts/bootstrap/customModal.js"></script>
+    <!-- Button -->
+    <script src="javascripts/bootstrap/button.js"></script>
+    <!-- Dropdown -->
+    <script src="javascripts/bootstrap/dropdown.js"></script>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54aa93fd40c1c81c" async="async"></script>
+
+
+  </body>
+</html>
