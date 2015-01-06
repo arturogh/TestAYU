@@ -5368,8 +5368,15 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-body {
-  padding-bottom: 70px; }
+.btn-primary {
+  background: #9DA8AB;
+  color: #FEFEFE;
+  border-color: inherit; }
+  .btn-primary:hover {
+    background: #F8A732; }
+
+.btn-link {
+  color: #717175; }
 
 /* .btn {
     display: inline;
@@ -5379,13 +5386,18 @@ body {
   @media screen and (min-width: 768px) and (max-width: 991px) {
     .row1 {
       display: inherit;
-      height: 50px; } }
+      height: 50px;
+      margin: 10px 0; } }
   .row1 img {
     height: 50px;
     width: auto; }
 
 .row2 {
-  height: 50px; }
+  height: 50px;
+  margin: 20px 0; }
+  @media screen and (min-width: 768px) {
+    .row2 {
+      margin: 30px 0; } }
   .row2 div {
     height: 100%; }
     .row2 div img {
@@ -5396,65 +5408,195 @@ body {
       .row2 div ul li img {
         height: 50px;
         width: auto; }
-  @media screen and (max-width: 1001px) {
+  @media screen and (max-width: 991px) {
     .row2 .desktopNav {
       display: none; } }
+  .row2 .desktopNav ul li {
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 0 20px; }
+    .row2 .desktopNav ul li a {
+      color: #717175; }
+      .row2 .desktopNav ul li a:hover {
+        color: #F8A732;
+        text-decoration: none; }
 
-@media screen and (max-width: 1001px) {
-  .row3 .desktopfilter {
-    display: none; } }
+.row3 .desktopfilter {
+  font-size: 1.5em;
+  font-weight: 300; }
+  @media screen and (max-width: 991px) {
+    .row3 .desktopfilter {
+      display: none; } }
+  .row3 .desktopfilter li {
+    margin: 10px 0; }
+    .row3 .desktopfilter li.active a {
+      background: #F8A732; }
+    .row3 .desktopfilter li a {
+      padding: 10px 0px 10px 10px;
+      font-size: 0.8em;
+      width: 80%; }
 @media screen and (min-width: 768px) {
   .row3 .mobileNav {
     display: none; } }
-@media screen and (min-width: 1002px) {
+@media screen and (min-width: 992px) {
   .row3 .tabletNav {
     display: none; } }
 @media screen and (max-width: 767px) {
   .row3 .tabletNav {
     display: none; } }
-@media screen and (min-width: 1002px) {
+@media screen and (min-width: 992px) {
   .row3 .mobileFilter {
     display: none; } }
+.row3 .backButton {
+  padding: 0;
+  margin-top: 20px; }
+.row3 .content p {
+  line-height: 1.75;
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 0 auto 20px; }
+  @media screen and (max-width: 991px) {
+    .row3 .content p {
+      font-size: 1.25em;
+      padding: 0 20px; } }
+.row3 .content img {
+  margin-bottom: 20px; }
 
 .footer {
   background: #47484B;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 50px; }
   .footer h2 {
     color: #FEFEFE; }
-  .footer button.footerBoton {
+  .footer a.footerBoton {
     font-size: 2em;
     margin: 10px;
-    width: 80%; }
-  .footer button.back {
-    color: #F8F8F8;
+    width: 95%; }
+    @media screen and (max-width: 768px) {
+      .footer a.footerBoton {
+        font-size: 1.2em; } }
+  .footer a.upButton {
+    color: #EFEFF0;
     margin: 0 10px;
-    padding: 20px; }
-    .footer button.back:hover {
-      color: #F8F8F8;
+    padding: 15px; }
+    .footer a.upButton:hover {
+      color: #EFEFF0;
       text-decoration: none; }
   .footer p {
-    width: 80%;
-    padding-top: 20px;
+    width: 90%;
+    padding-top: 10px;
     margin: 0 auto;
     text-align: left;
-    color: #F8F8F8;
+    color: #EFEFF0;
     font-size: 1.75em;
     font-weight: 300; }
     @media screen and (max-width: 991px) {
       .footer p {
         display: none; } }
-  .footer .socialFooter {
+    .footer p.mobileFooterText {
+      display: block;
+      font-size: 1em;
+      padding: 0;
+      font-weight: 200;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .footer p.mobileFooterText {
+          font-size: 1.4em; } }
+      @media screen and (min-width: 992px) {
+        .footer p.mobileFooterText {
+          display: none; } }
+  .footer .footerSocialIcons {
     margin: 0;
-    padding: 10px;
+    padding: 0;
     text-align: center; }
     @media screen and (max-width: 991px) {
-      .footer .socialFooter {
+      .footer .footerSocialIcons {
         padding: 40px 0; } }
-    .footer .socialFooter img {
-      width: 80px;
+    .footer .footerSocialIcons img {
+      width: 90px;
+      margin: 0 10px 0;
       height: auto; }
+      @media screen and (max-width: 991px) {
+        .footer .footerSocialIcons img {
+          width: 80px; } }
+      @media screen and (max-width: 400px) {
+        .footer .footerSocialIcons img {
+          width: 50px; } }
       @media screen and (min-width: 992px) {
-        .footer .socialFooter img {
+        .footer .footerSocialIcons img {
           margin: 10px; } }
+
+h1 {
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #F8A732;
+  margin: 20px 0 0; }
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 1.8em; } }
+  h1 a {
+    color: inherit;
+    text-decoration: none; }
+    h1 a:hover {
+      color: #717175;
+      text-decoration: none; }
+
+small {
+  padding: 10px 0 20px;
+  display: inline-block; }
+
+.excerpt {
+  padding: 20px 0 0;
+  color: #262624; }
+
+.morePosts {
+  padding-top: 20px; }
+  @media screen and (max-width: 1001px) {
+    .morePosts {
+      padding-top: 10px; } }
+
+.readMore {
+  padding: 10px 0; }
+
+#overlay {
+  color: #fff;
+  font-size: 1.2em;
+  display: none;
+  background: rgba(248, 167, 49, 0.975);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left; }
+  #overlay h1 {
+    color: #fff;
+    padding-bottom: 10px; }
+  #overlay p {
+    padding-bottom: 40px; }
+  #overlay input:nth-of-type(2) {
+    margin-bottom: 40px; }
+  #overlay ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    @media screen and (max-width: 767px) {
+      #overlay ul li:nth-of-type(2) {
+        padding-top: 20px; } }
+  #overlay button {
+    font-size: 1.5em;
+    text-decoration: none; }
+    #overlay button:nth-of-type(2) {
+      font-weight: 200; }
+
+.form-group {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px; }
 
 /*# sourceMappingURL=style.css.map */
